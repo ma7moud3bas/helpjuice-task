@@ -7,19 +7,47 @@
     <title>Helpjuice Task</title>
   </head>
   <body>
-    <main class="flex flex-col w-screen min-h-screen">
-      <div class="flex items-center justify-between" id="navbar">
-        <nav>
-
-        </nav>
-        <div class="flex items-center">
-          <div class="flex gap-x-2 items-center">
-            <img class="w-[14px] h-[14px] text-gray-500" src="./src/assets/lock-simple-open.svg" alt="">
-            <span>Editing</span>
+    <main class="flex flex-col w-screen min-h-screen font-Inter">
+      <!-- Navbar -->
+      <div class="flex items-center justify-between px-4 py-4" id="navbar">
+        <nav class="flex items-center">
+          <div class="mr-4 md:mr-8">
+            <img class="w-[12px] h-[12px]" src="./src/assets/caret-double-right-bold.svg" alt="caret right icon">
           </div>
-          <div></div>
+          <div class="flex items-center gap-x-3">
+            <div class="flex items-center max-md:hidden gap-x-3">
+              <a href="#" class="flex items-center gap-x-1">
+                <img class="w-[16px] h-[16px]" src="./src/assets/book-open-bold.svg" alt="open book icon">
+                <span class="text-brand-light-gray underline text-sm underline-offset-1">Main</span>
+              </a>
+              <span class="text-brand-light-gray">/</span>
+              <a href="#" class="text-brand-light-gray hover:text-brand-light-gray underline-offset-1 text-sm ">Getting started</a>
+              <span class="text-brand-light-gray">/</span>
+            </div>
+            
+              <a href="#" class="flex items-center gap-x-1 text-brand-light-gray hover:text-brand-light-gray underline-offset-1 text-sm ">
+                <img class="w-[16px] h-[16px] md:hidden" src="./src/assets/book-open-bold.svg" alt="open book icon">
+               <span class="text-brand-light-gray text-sm ">
+                  Frontend developer test proje...
+               </span>
+              </a>
+            
+          </div>
+        </nav>
+        <div class="flex items-center max-[500px]:hidden">
+          <div class="flex md:gap-x-2 items-center px-2 md:px-6 border-r border-gray-200 text-sm">
+            <img class="w-[18px] h-[18px] text-gray-500" src="./src/assets/lock-simple-open.svg" alt="simple lock icon">
+            <span class=" text-brand-light-gray max-md:hidden">Editing</span>
+          </div>
+          <div class="px-2 md:px-6">
+            <button class="flex gap-x-2 items-center text-brand-blue font-bold text-sm">
+              <span>Publish Space</span>
+              <img class="w-[16px] h-[16px] text-gray-500" src="./src/assets/caret-down-bold.svg" alt="caret down icon">
+            </button>
+          </div>
         </div>
       </div>
+      <!-- End Navbar -->
 
     </main>
     <script type="module" src="./src/main.js"></script>
