@@ -8,9 +8,14 @@ a {
   @apply text-blue-500 hover:text-blue-400 hover:underline transition-all;
 }
 
-[contenteditable="true"]:empty:before {
+[contenteditable="true"]:empty:is(:focus, :hover, :only-child):before {
   content: attr(placeholder);
   pointer-events: none;
   display: inline-block; /* For Firefox */
   color: #9DA3AE;
+}
+
+.block:hover {
+  @apply bg-gray-50;
+  transition: background-color 0.2s ease-in-out;
 }
