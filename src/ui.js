@@ -2,6 +2,8 @@ import { handleBlockInput, handleBlockKeyDown } from "./blockHandlers";
 import { optionsList } from "./constants";
 import { getBlocks } from "./storage";
 
+import TextTIcon from "./assets/text-t-bold.svg"
+
 export const renderBlocks = () => {
     const blocks = getBlocks();
     const container = document.getElementById('blocks-container');
@@ -102,7 +104,7 @@ export const renderOptionsList = (list, filter) => {
     Object.values(filteredOptionsList).forEach((option, index) => {
         list.innerHTML += `
             <div data-option-type="${option.type}" data-option-focused="${index === 0}" tabIndex="1" class="w-full p-1.5 flex items-center gap-x-3">
-                <img class="h-7 w-7" src="./src/assets/text-t-bold.svg" alt="text t icon" />
+                <img class="h-7 w-7" src=${TextTIcon} alt="text t icon" />
                 <div class="flex flex-col gap-y-0.5">
                 <span class="text-sm font-bold text-brand-dark">${option.title}</span>
                 <span class="text-xs text-brand-light-gray">Shortcut: ${option.type}</span> 
