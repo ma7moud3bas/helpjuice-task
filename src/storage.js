@@ -2,14 +2,35 @@ export const checkStorage = () => {
     return !!localStorage.getItem('blocks');
 }
 
+export const setBlocks = (blocks) => {
+    localStorage.setItem('blocks', JSON.stringify(blocks));
+}
+
+export const updateBlockType = (index, newType) => {
+    const blocks = getBlocks();
+    blocks[index].type = newType;
+    setBlocks(blocks);
+}
+
+export const updateBlockPlaceholder = (index, placeholder) => {
+    const blocks = getBlocks();
+    blocks[index].placeholder = placeholder;
+    setBlocks(blocks);
+}
+
+export const updateBlockContent = (index, text) => {
+    const blocks = getBlocks();
+    blocks[index].content = text;
+    setBlocks(blocks);
+}
 export const initializeLocalStorage = () => {
     if (checkStorage()) return;
-    localStorage.setItem('blocks', JSON.stringify([
+    setBlocks([
         {
             content: "",
             type: "text"
         }
-    ]));
+    ]);
 }
 
 export const getBlocks = () => {
@@ -19,7 +40,7 @@ export const getBlocks = () => {
 export const removeBlock = (index) => {
     const blocks = getBlocks();
     blocks.splice(index, 1);
-    localStorage.setItem('blocks', JSON.stringify(blocks));
+    setBlocks(blocks);
 }
 
 
@@ -30,6 +51,6 @@ export const AddBlock = (index) => {
         type: "text"
     }
     blocks.splice(index, 0, block);
-    localStorage.setItem('blocks', JSON.stringify(blocks));
+    setBlocks(blocks);
 }
 
