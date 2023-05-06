@@ -2,25 +2,101 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Helpjuice Task</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://static.helpjuice.com/assets/apple-touch-icon-875ad18601f983c5f561dc99fc1b647a0bf400e75a5f95999810c157028500cf.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://static.helpjuice.com/assets/favicon-32x32-161f2153235b710a8ed7b9233ed6b195936bdb57bf1310e720f7fea79547cf9d.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://static.helpjuice.com/assets/favicon-16x16-9120efe1a4e5b2bad4782c59b9fb3a8531424d2429cb21fc5b714909f848288d.png">
   </head>
   <body>
-    <main class="flex flex-col w-screen min-h-screen">
-      <div class="flex items-center justify-between" id="navbar">
-        <nav>
-
-        </nav>
-        <div class="flex items-center">
-          <div class="flex gap-x-2 items-center">
-            <img class="w-[14px] h-[14px] text-gray-500" src="./src/assets/lock-simple-open.svg" alt="">
-            <span>Editing</span>
+    <main class="h-full flex flex-col items-center w-screen min-h-screen font-Inter">
+      <!-- Navbar -->
+      <div class="flex items-center justify-between px-4 py-4 w-full" id="navbar">
+        <nav class="flex items-center">
+          <div class="mr-4 md:mr-8">
+            <img class="w-[12px] h-[12px]" src="./src/assets/caret-double-right-bold.svg" alt="caret right icon">
           </div>
-          <div></div>
+          <div class="flex items-center gap-x-3">
+            <div class="flex items-center max-md:hidden gap-x-3">
+              <a href="#" class="flex items-center gap-x-1">
+                <img class="w-[16px] h-[16px]" src="./src/assets/book-open-bold.svg" alt="open book icon">
+                <span class="text-brand-light-gray underline text-sm underline-offset-1">Main</span>
+              </a>
+              <span class="text-brand-light-gray">/</span>
+              <a href="#" class="text-brand-light-gray hover:text-brand-light-gray underline-offset-1 text-sm ">Getting started</a>
+              <span class="text-brand-light-gray">/</span>
+            </div>
+              <a href="#" class="flex items-center gap-x-1 text-brand-light-gray hover:text-brand-light-gray underline-offset-1 text-sm ">
+                <img class="w-[16px] h-[16px] md:hidden" src="./src/assets/book-open-bold.svg" alt="open book icon">
+               <span class="text-brand-light-gray text-sm ">
+                  Front-end developer test proje...
+               </span>
+              </a>
+          </div>
+        </nav>
+        <div class="flex items-center max-[500px]:hidden">
+          <div class="flex md:gap-x-2 items-center px-2 md:px-6 border-r border-gray-200 text-sm">
+            <img class="w-[18px] h-[18px] text-gray-500" src="./src/assets/lock-simple-open.svg" alt="simple lock icon">
+            <span class=" text-brand-light-gray max-md:hidden">Editing</span>
+          </div>
+          <div class="px-2 md:px-6">
+            <button class="flex gap-x-2 items-center text-brand-blue font-bold text-sm">
+              <span>Publish Space</span>
+              <img class="w-[16px] h-[16px] text-gray-500" src="./src/assets/caret-down-bold.svg" alt="caret down icon">
+            </button>
+          </div>
         </div>
       </div>
-
+      <!-- End Navbar -->
+      <!-- Toolbar -->
+      <section class="w-full max-w-4xl mt-4 mx-auto px-4" id="toolbar">
+        <div class="w-full border border-[#E5E7EB] shadow-sm h-11 rounded-md py-1.5 px-2 flex items-center justify-between">
+          <div class="toolbar-left h-full flex items-center gap-x-2.5">
+            <div class="h-full px-2 rounded bg-brand-light-mint text-brand-dark-mint font-semibold flex items-center justify-center">
+              P
+            </div>
+            <span class="h-[14px] w-0 border border-gray-200"></span>
+            <div class="flex items-center gap-x-0.5">
+              <img class="h-4 w-4" src="./src/assets/clock.svg" alt="clock icon">
+              <span class="text-brand-light-gray text-sm">0min</span>
+            </div>
+            <span class="h-[14px] w-0 border border-gray-200"></span>
+            <div>
+              <img class="h-5 w-5" src="./src/assets/bunny-avatar.png" alt="bunny avatar">
+            </div>
+            <span class="h-[14px] w-0 border border-gray-200"></span>
+            <div class="flex items-center gap-x-0.5">
+              <img class="h-4 w-4" src="./src/assets/arrow-down-left-bold.svg" alt="arrow down icon">
+              <span class="text-brand-light-gray text-sm">0</span>
+            </div>
+          </div>
+          <div class="toolbar-right h-full flex items-center gap-x-1.5">
+            <img class="h-5 w-5" src="./src/assets/icons8-checkmark.svg" alt="checkmark icon">
+            <img class="h-5 w-5 [transform:rotateY(180deg)]" src="./src/assets/cloud-bold.svg" alt="cloud icon">
+            <img class="h-5 w-5" src="./src/assets/dots-three-vertical-bold.svg" alt="three dots menu icon">
+          </div>
+        </div>
+      </section>
+      <!-- End Toolbar -->
+      <!-- Editor -->
+      <section class="flex flex-col w-full max-w-4xl mt-8 mx-auto px-4 h-full flex-1" id="editor">
+        <div>
+          <h1 class="text-4xl font-bold text-brand-dark">Front-end developer test project</h1>
+          <hr class="my-4 bg-gray-100 opacity-60">
+          <h2 class="text-brand-dark/70">Your goal is to make a page that looks exactly like this one, and has the ability to create H1 tags simply by typing / then 1, then typing text, and hitting enter.</h2>
+        </div>
+        <div id="blocks-container" data-list-openable="true" class="mt-8 h-full flex-1 relative"> 
+          <!-- Blocks will be added here -->
+        </div>
+      </section>
+      <!-- End Editor -->
+      <!-- Floating question mark -->
+      <div class="fixed bottom-4 right-4">
+        <div class="p-1 bg-gray-200 rounded-md">
+          <img class="h-6 w-6" src="./src/assets/question.svg" alt="question mark icon">
+        </div>
+      </div>
+      <!-- End Floating question mark  -->
     </main>
     <script type="module" src="./src/main.js"></script>
   </body>

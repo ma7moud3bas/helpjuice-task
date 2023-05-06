@@ -1,7 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 a {
   @apply text-blue-500 hover:text-blue-400 hover:underline transition-all;
+}
+
+[contenteditable="true"]:empty:is(:focus, :hover, :only-child):before {
+  content: attr(placeholder);
+  pointer-events: none;
+  display: inline-block; /* For Firefox */
+  color: #9DA3AE;
+}
+
+.list-block:hover {
+  @apply bg-gray-50;
+  transition: background-color 0.2s ease-in-out;
+}
+
+[data-option-focused="true"] {
+  @apply bg-gray-100;
+}
+
+[data-type] {
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+[data-type="h1"] {
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+}
+
+[data-type="h2"] {
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+}
+
+[data-type="h3"] {
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+[data-type="h4"] {
+  font-size: 1em;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+}
+
+[data-type="h5"] {
+  font-size: 0.83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+}
+
+[data-type="h6"] {
+  font-size: 0.67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
 }
