@@ -87,7 +87,7 @@ export const addOptionsList = (block) => {
 
 export const renderOptionsList = (list, filter) => {
     const filteredOptionsList = Object.values(optionsList).filter((option) => {
-        return option.title.toLowerCase().includes(filter.toLowerCase());
+        return option.title.toLowerCase().includes(filter.toLowerCase()) || option.type.toLowerCase().includes(filter.toLowerCase());
     })
     list.innerHTML = "";
     if (filteredOptionsList.length === 0) {
